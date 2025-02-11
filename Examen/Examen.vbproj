@@ -73,16 +73,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAddCliente.Designer.vb">
+    <Compile Include="Cliente\frmAddCliente.Designer.vb">
       <DependentUpon>frmAddCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAddCliente.vb">
+    <Compile Include="Cliente\frmAddCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientesMain.Designer.vb">
+    <Compile Include="Cliente\frmClientesMain.Designer.vb">
       <DependentUpon>frmClientesMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmClientesMain.vb">
+    <Compile Include="Cliente\frmClientesMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.vb">
@@ -109,10 +109,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAddCliente.resx">
+    <EmbeddedResource Include="Cliente\frmAddCliente.resx">
       <DependentUpon>frmAddCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientesMain.resx">
+    <EmbeddedResource Include="Cliente\frmClientesMain.resx">
       <DependentUpon>frmClientesMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">

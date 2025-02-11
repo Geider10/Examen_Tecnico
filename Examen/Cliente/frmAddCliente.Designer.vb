@@ -26,12 +26,16 @@ Partial Class frmAddCliente
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbxNombre = New System.Windows.Forms.TextBox()
+        Me.tbxTelefono = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbxCorreo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnGuardar
         '
         Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGuardar.Location = New System.Drawing.Point(224, 305)
+        Me.btnGuardar.Location = New System.Drawing.Point(224, 276)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(92, 37)
         Me.btnGuardar.TabIndex = 2
@@ -41,7 +45,7 @@ Partial Class frmAddCliente
         'btnCancelar
         '
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.Location = New System.Drawing.Point(394, 305)
+        Me.btnCancelar.Location = New System.Drawing.Point(364, 276)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(92, 37)
         Me.btnCancelar.TabIndex = 3
@@ -52,7 +56,7 @@ Partial Class frmAddCliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(133, 114)
+        Me.Label1.Location = New System.Drawing.Point(141, 130)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 4
@@ -60,16 +64,55 @@ Partial Class frmAddCliente
         '
         'tbxNombre
         '
-        Me.tbxNombre.Location = New System.Drawing.Point(216, 111)
+        Me.tbxNombre.Location = New System.Drawing.Point(224, 127)
         Me.tbxNombre.Name = "tbxNombre"
-        Me.tbxNombre.Size = New System.Drawing.Size(100, 20)
+        Me.tbxNombre.Size = New System.Drawing.Size(232, 20)
         Me.tbxNombre.TabIndex = 5
+        '
+        'tbxTelefono
+        '
+        Me.tbxTelefono.Location = New System.Drawing.Point(224, 170)
+        Me.tbxTelefono.Name = "tbxTelefono"
+        Me.tbxTelefono.Size = New System.Drawing.Size(232, 20)
+        Me.tbxTelefono.TabIndex = 7
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label2.Location = New System.Drawing.Point(141, 173)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 17)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Telefono"
+        '
+        'tbxCorreo
+        '
+        Me.tbxCorreo.Location = New System.Drawing.Point(224, 220)
+        Me.tbxCorreo.Name = "tbxCorreo"
+        Me.tbxCorreo.Size = New System.Drawing.Size(232, 20)
+        Me.tbxCorreo.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label3.Location = New System.Drawing.Point(141, 223)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(51, 17)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Correo"
         '
         'frmAddCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(662, 450)
+        Me.Controls.Add(Me.tbxCorreo)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.tbxTelefono)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbxNombre)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnCancelar)
@@ -85,4 +128,8 @@ Partial Class frmAddCliente
     Friend WithEvents btnCancelar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents tbxNombre As TextBox
+    Friend WithEvents tbxTelefono As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents tbxCorreo As TextBox
+    Friend WithEvents Label3 As Label
 End Class

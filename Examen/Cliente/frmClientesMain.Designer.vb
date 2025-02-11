@@ -22,27 +22,18 @@ Partial Class frmClientesMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAtrasCliente = New System.Windows.Forms.Button()
         Me.btnAgregarCliente = New System.Windows.Forms.Button()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
+        Me.tbxSearch = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(34, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(113, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Clientes"
         '
         'btnAtrasCliente
         '
         Me.btnAtrasCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAtrasCliente.Location = New System.Drawing.Point(205, 27)
+        Me.btnAtrasCliente.Location = New System.Drawing.Point(65, 69)
         Me.btnAtrasCliente.Name = "btnAtrasCliente"
         Me.btnAtrasCliente.Size = New System.Drawing.Size(92, 37)
         Me.btnAtrasCliente.TabIndex = 1
@@ -52,7 +43,7 @@ Partial Class frmClientesMain
         'btnAgregarCliente
         '
         Me.btnAgregarCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAgregarCliente.Location = New System.Drawing.Point(337, 27)
+        Me.btnAgregarCliente.Location = New System.Drawing.Point(65, 401)
         Me.btnAgregarCliente.Name = "btnAgregarCliente"
         Me.btnAgregarCliente.Size = New System.Drawing.Size(92, 37)
         Me.btnAgregarCliente.TabIndex = 2
@@ -64,18 +55,36 @@ Partial Class frmClientesMain
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Location = New System.Drawing.Point(65, 124)
         Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.Size = New System.Drawing.Size(569, 256)
+        Me.dgvClientes.Size = New System.Drawing.Size(775, 256)
         Me.dgvClientes.TabIndex = 3
+        '
+        'tbxSearch
+        '
+        Me.tbxSearch.Location = New System.Drawing.Point(191, 78)
+        Me.tbxSearch.Name = "tbxSearch"
+        Me.tbxSearch.Size = New System.Drawing.Size(290, 20)
+        Me.tbxSearch.TabIndex = 4
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Location = New System.Drawing.Point(512, 69)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 37)
+        Me.btnBuscar.TabIndex = 5
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'frmClientesMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(878, 472)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.tbxSearch)
         Me.Controls.Add(Me.dgvClientes)
         Me.Controls.Add(Me.btnAgregarCliente)
         Me.Controls.Add(Me.btnAtrasCliente)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "frmClientesMain"
         Me.Text = "frmClientesMain"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
@@ -83,9 +92,9 @@ Partial Class frmClientesMain
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnAtrasCliente As Button
     Friend WithEvents btnAgregarCliente As Button
     Friend WithEvents dgvClientes As DataGridView
+    Friend WithEvents tbxSearch As TextBox
+    Friend WithEvents btnBuscar As Button
 End Class

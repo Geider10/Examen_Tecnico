@@ -39,9 +39,9 @@ Partial Class frmMain
         'btnClientes
         '
         Me.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClientes.Location = New System.Drawing.Point(110, 208)
+        Me.btnClientes.Location = New System.Drawing.Point(121, 164)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Size = New System.Drawing.Size(75, 23)
+        Me.btnClientes.Size = New System.Drawing.Size(107, 44)
         Me.btnClientes.TabIndex = 1
         Me.btnClientes.Text = "Clientes"
         Me.btnClientes.UseVisualStyleBackColor = True
