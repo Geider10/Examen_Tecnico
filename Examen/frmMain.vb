@@ -1,4 +1,9 @@
-﻿Public Class frmMain
+﻿Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Windows.Forms
+Imports System.Configuration
+
+Public Class frmMain
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         frmClientesMain.ShowDialog()
     End Sub
