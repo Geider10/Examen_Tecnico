@@ -105,6 +105,10 @@
       <Project>{d2ce6861-9b75-41d7-af7e-57e8fc8e8573}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.vbproj">
+      <Project>{946f9c50-523f-4245-a76b-cb62121a8153}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

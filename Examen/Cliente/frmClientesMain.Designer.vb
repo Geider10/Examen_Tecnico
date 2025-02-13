@@ -22,12 +22,17 @@ Partial Class frmClientesMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnAtrasCliente = New System.Windows.Forms.Button()
         Me.btnAgregarCliente = New System.Windows.Forms.Button()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.tbxSearch = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnEditarCliente = New System.Windows.Forms.Button()
+        Me.btnEliminarCliente = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAtrasCliente
@@ -47,13 +52,13 @@ Partial Class frmClientesMain
         Me.btnAgregarCliente.Name = "btnAgregarCliente"
         Me.btnAgregarCliente.Size = New System.Drawing.Size(92, 37)
         Me.btnAgregarCliente.TabIndex = 2
-        Me.btnAgregarCliente.Text = "Agregar nuevo cliente"
+        Me.btnAgregarCliente.Text = "Agregar cliente"
         Me.btnAgregarCliente.UseVisualStyleBackColor = True
         '
         'dgvClientes
         '
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(65, 124)
+        Me.dgvClientes.Location = New System.Drawing.Point(65, 122)
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.Size = New System.Drawing.Size(775, 256)
         Me.dgvClientes.TabIndex = 3
@@ -75,11 +80,37 @@ Partial Class frmClientesMain
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataSource = GetType(Entity.Cliente)
+        '
+        'btnEditarCliente
+        '
+        Me.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEditarCliente.Location = New System.Drawing.Point(231, 401)
+        Me.btnEditarCliente.Name = "btnEditarCliente"
+        Me.btnEditarCliente.Size = New System.Drawing.Size(92, 37)
+        Me.btnEditarCliente.TabIndex = 6
+        Me.btnEditarCliente.Text = "Editar cliente"
+        Me.btnEditarCliente.UseVisualStyleBackColor = True
+        '
+        'btnEliminarCliente
+        '
+        Me.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEliminarCliente.Location = New System.Drawing.Point(389, 401)
+        Me.btnEliminarCliente.Name = "btnEliminarCliente"
+        Me.btnEliminarCliente.Size = New System.Drawing.Size(92, 37)
+        Me.btnEliminarCliente.TabIndex = 7
+        Me.btnEliminarCliente.Text = "Eliminar cliente"
+        Me.btnEliminarCliente.UseVisualStyleBackColor = True
+        '
         'frmClientesMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(878, 472)
+        Me.Controls.Add(Me.btnEliminarCliente)
+        Me.Controls.Add(Me.btnEditarCliente)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.tbxSearch)
         Me.Controls.Add(Me.dgvClientes)
@@ -88,6 +119,7 @@ Partial Class frmClientesMain
         Me.Name = "frmClientesMain"
         Me.Text = "frmClientesMain"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -97,4 +129,7 @@ Partial Class frmClientesMain
     Friend WithEvents dgvClientes As DataGridView
     Friend WithEvents tbxSearch As TextBox
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents ClienteBindingSource As BindingSource
+    Friend WithEvents btnEditarCliente As Button
+    Friend WithEvents btnEliminarCliente As Button
 End Class

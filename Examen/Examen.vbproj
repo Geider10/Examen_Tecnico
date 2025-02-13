@@ -131,6 +131,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\Entity.Cliente.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -142,6 +143,10 @@
     <ProjectReference Include="..\BLL\BLL.vbproj">
       <Project>{515f62b1-a756-4515-9821-b090dc5d8632}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.vbproj">
+      <Project>{946f9c50-523f-4245-a76b-cb62121a8153}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
