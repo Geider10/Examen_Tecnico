@@ -16,4 +16,9 @@ Public Class Cliente_BLL
         Dim clienteDal As ClienteDAL = New ClienteDAL()
         clienteDal.Update(cliente, id)
     End Sub
+
+    Public Sub Delete(id As Integer)
+        Dim clienteDal As ClienteDAL = New ClienteDAL()
+        clienteDal.Delete(id)
+    End Sub
 End Class

@@ -57,9 +57,14 @@ Partial Class frmClientesMain
         '
         'dgvClientes
         '
+        Me.dgvClientes.AllowUserToAddRows = False
+        Me.dgvClientes.AllowUserToDeleteRows = False
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvClientes.Location = New System.Drawing.Point(65, 122)
+        Me.dgvClientes.MultiSelect = False
         Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvClientes.Size = New System.Drawing.Size(775, 256)
         Me.dgvClientes.TabIndex = 3
         '

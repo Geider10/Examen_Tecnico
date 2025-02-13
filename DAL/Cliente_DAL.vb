@@ -40,7 +40,7 @@ Public Class ClienteDAL
     End Sub
 
     Public Sub Update(cliente As Cliente, id As String)
-        Dim query As String = "UPDATE clientes SET cliente=@cliente,telefono=@telefono,correo=@correo where id=@id"
+        Dim query As String = "UPDATE clientes SET cliente=@cliente,telefono=@telefono,correo=@correo where ID=@id"
         Try
             db.ConectarDB()
             Using command As New SqlCommand(query, db.connection)
@@ -52,6 +52,21 @@ Public Class ClienteDAL
             End Using
         Catch ex As Exception
             Console.WriteLine("Error when editing a client: " + ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+    End Sub
+
+    Public Sub Delete(id As Integer)
+        Dim query = "DELETE FROM clientes where ID=@ID"
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                command.Parameters.AddWithValue("@ID", id)
+                command.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error when deleting a client: " + ex.Message)
         Finally
             db.CerrarDB()
         End Try
