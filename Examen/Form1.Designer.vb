@@ -24,6 +24,7 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClientes = New System.Windows.Forms.Button()
+        Me.btnProductos = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -46,11 +47,22 @@ Partial Class frmMain
         Me.btnClientes.Text = "Clientes"
         Me.btnClientes.UseVisualStyleBackColor = True
         '
+        'btnProductos
+        '
+        Me.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnProductos.Location = New System.Drawing.Point(310, 164)
+        Me.btnProductos.Name = "btnProductos"
+        Me.btnProductos.Size = New System.Drawing.Size(107, 44)
+        Me.btnProductos.TabIndex = 2
+        Me.btnProductos.Text = "Productos"
+        Me.btnProductos.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnProductos)
         Me.Controls.Add(Me.btnClientes)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmMain"
@@ -62,4 +74,5 @@ Partial Class frmMain
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnClientes As Button
+    Friend WithEvents btnProductos As Button
 End Class

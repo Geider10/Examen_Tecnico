@@ -48,4 +48,8 @@ Public Class frmAddCliente
             End If
         Next
     End Sub
+
+    Private Sub frmAddCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

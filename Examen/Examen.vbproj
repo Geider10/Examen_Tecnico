@@ -108,6 +108,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Producto\frmAddProducto.Designer.vb">
+      <DependentUpon>frmAddProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\frmAddProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\frmProductoMain.Designer.vb">
+      <DependentUpon>frmProductoMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\frmProductoMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Cliente\frmAddCliente.resx">
@@ -124,6 +136,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\frmAddProducto.resx">
+      <DependentUpon>frmAddProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\frmProductoMain.resx">
+      <DependentUpon>frmProductoMain.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
