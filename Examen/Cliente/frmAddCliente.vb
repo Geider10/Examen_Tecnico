@@ -1,7 +1,6 @@
 ﻿Imports BLL
 Imports Entity
 Public Class frmAddCliente
-    Private clienteBll As Cliente_BLL = New Cliente_BLL()
     Public idCliente As Integer = 0
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -11,7 +10,8 @@ Public Class frmAddCliente
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim cliente = New Cliente()
+        Dim clienteBll As Cliente_BLL = New Cliente_BLL()
+        Dim cliente As New Cliente()
         cliente.cliente = tbxNombre.Text
         cliente.telefono = tbxTelefono.Text
         cliente.correo = tbxCorreo.Text
@@ -27,7 +27,7 @@ Public Class frmAddCliente
         idCliente = 0
         CleanForm()
         Close()
-        ActualizarFrmMain()
+        frmClientesMain.ActualizarDGV()
     End Sub
     Public Sub SetTxt(nombre As String, telefono As String, correo As String)
         tbxNombre.Text = nombre
@@ -41,15 +41,4 @@ Public Class frmAddCliente
         tbxCorreo.Text = " "
     End Sub
 
-    Private Sub ActualizarFrmMain()
-        For Each frm As Form In Application.OpenForms
-            If TypeOf frm Is frmClientesMain Then
-                DirectCast(frm, frmClientesMain).ActualizarDGV()
-            End If
-        Next
-    End Sub
-
-    Private Sub frmAddCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

@@ -11,11 +11,9 @@ Public Class frmAddProducto
 
         If idProducto <> 0 Then
             productoBll.Update(producto, idProducto)
-            MessageBox.Show("Se edito un cliente, Id: " + idProducto.ToString())
 
         Else
             productoBll.Add(producto)
-            MessageBox.Show("Se edito un cliente, Id: " + idProducto.ToString())
         End If
 
         idProducto = 0
