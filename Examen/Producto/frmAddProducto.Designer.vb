@@ -24,12 +24,13 @@ Partial Class frmAddProducto
     Private Sub InitializeComponent()
         Me.tbxCategoria = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbxPrecio = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbxNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.nudPrecio = New System.Windows.Forms.NumericUpDown()
+        CType(Me.nudPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbxCategoria
@@ -48,13 +49,6 @@ Partial Class frmAddProducto
         Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Categoria"
-        '
-        'tbxPrecio
-        '
-        Me.tbxPrecio.Location = New System.Drawing.Point(273, 154)
-        Me.tbxPrecio.Name = "tbxPrecio"
-        Me.tbxPrecio.Size = New System.Drawing.Size(232, 20)
-        Me.tbxPrecio.TabIndex = 15
         '
         'Label2
         '
@@ -103,15 +97,24 @@ Partial Class frmAddProducto
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
+        'nudPrecio
+        '
+        Me.nudPrecio.DecimalPlaces = 2
+        Me.nudPrecio.Location = New System.Drawing.Point(273, 154)
+        Me.nudPrecio.Maximum = New Decimal(New Integer() {1410065407, 2, 0, 0})
+        Me.nudPrecio.Name = "nudPrecio"
+        Me.nudPrecio.Size = New System.Drawing.Size(232, 20)
+        Me.nudPrecio.TabIndex = 18
+        '
         'frmAddProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.nudPrecio)
         Me.Controls.Add(Me.tbxCategoria)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.tbxPrecio)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbxNombre)
         Me.Controls.Add(Me.Label1)
@@ -119,6 +122,7 @@ Partial Class frmAddProducto
         Me.Controls.Add(Me.btnGuardar)
         Me.Name = "frmAddProducto"
         Me.Text = "frmAddProducto"
+        CType(Me.nudPrecio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,10 +130,10 @@ Partial Class frmAddProducto
 
     Friend WithEvents tbxCategoria As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents tbxPrecio As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents tbxNombre As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents nudPrecio As NumericUpDown
 End Class
