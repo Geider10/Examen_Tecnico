@@ -21,4 +21,9 @@ Public Class Cliente_BLL
         Dim clienteDal As ClienteDAL = New ClienteDAL()
         clienteDal.Delete(id)
     End Sub
+
+    Public Function GetClienteByEmail(email As String) As Cliente
+        Dim clienteDal As ClienteDAL = New ClienteDAL()
+        Return clienteDal.GetClienteByEmail(email)
+    End Function
 End Class

@@ -87,6 +87,12 @@
     <Compile Include="Cliente\frmClientesMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Cliente\frmListaProductos.Designer.vb">
+      <DependentUpon>frmListaProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmListaProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAdmin.Designer.vb">
       <DependentUpon>frmAdmin.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\frmClientesMain.resx">
       <DependentUpon>frmClientesMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.vb</DependentUpon>

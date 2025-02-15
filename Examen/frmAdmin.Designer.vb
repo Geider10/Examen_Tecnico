@@ -41,7 +41,7 @@ Partial Class frmAdmin
         'btnClientes
         '
         Me.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClientes.Location = New System.Drawing.Point(111, 259)
+        Me.btnClientes.Location = New System.Drawing.Point(152, 259)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(107, 44)
         Me.btnClientes.TabIndex = 3
@@ -61,7 +61,7 @@ Partial Class frmAdmin
         'btnAtras
         '
         Me.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAtras.Location = New System.Drawing.Point(60, 38)
+        Me.btnAtras.Location = New System.Drawing.Point(27, 23)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(107, 44)
         Me.btnAtras.TabIndex = 6

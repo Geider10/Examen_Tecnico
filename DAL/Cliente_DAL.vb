@@ -59,6 +59,7 @@ Public Class ClienteDAL
 
     Public Sub Delete(id As Integer)
         Dim query = "DELETE FROM clientes where ID=@ID"
+
         Try
             db.ConectarDB()
             Using command As New SqlCommand(query, db.connection)
@@ -71,4 +72,31 @@ Public Class ClienteDAL
             db.CerrarDB()
         End Try
     End Sub
+
+    Public Function GetClienteByEmail(email As String) As Cliente
+        Dim query As String = "SELECT ID, Cliente, Telefono, Correo from clientes where Correo=@Correo"
+        Dim cliente As Cliente = Nothing
+
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                command.Parameters.AddWithValue("@Correo", email)
+                Using reader As SqlDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        cliente = New Cliente With {
+                            .cliente = reader.GetString(1),
+                            .telefono = reader.GetString(2),
+                            .correo = reader.GetString(3)
+                            }
+                    End If
+                End Using
+            End Using
+
+        Catch ex As Exception
+            Console.WriteLine("Error when get client by email: " + ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+        Return cliente
+    End Function
 End Class
