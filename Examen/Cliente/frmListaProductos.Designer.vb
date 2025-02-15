@@ -23,8 +23,10 @@ Partial Class frmListaProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvListaProductos = New System.Windows.Forms.DataGridView()
+        Me.btnComprar = New System.Windows.Forms.Button()
+        Me.btnPerfil = New System.Windows.Forms.Button()
+        CType(Me.dgvListaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -37,34 +39,58 @@ Partial Class frmListaProductos
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Productos"
         '
-        'dgvProductos
+        'dgvListaProductos
         '
-        Me.dgvProductos.AllowUserToAddRows = False
-        Me.dgvProductos.AllowUserToDeleteRows = False
-        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvProductos.Location = New System.Drawing.Point(32, 84)
-        Me.dgvProductos.MultiSelect = False
-        Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProductos.Size = New System.Drawing.Size(612, 256)
-        Me.dgvProductos.TabIndex = 15
+        Me.dgvListaProductos.AllowUserToAddRows = False
+        Me.dgvListaProductos.AllowUserToDeleteRows = False
+        Me.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListaProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvListaProductos.Location = New System.Drawing.Point(32, 84)
+        Me.dgvListaProductos.MultiSelect = False
+        Me.dgvListaProductos.Name = "dgvListaProductos"
+        Me.dgvListaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvListaProductos.Size = New System.Drawing.Size(528, 256)
+        Me.dgvListaProductos.TabIndex = 15
+        '
+        'btnComprar
+        '
+        Me.btnComprar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnComprar.Location = New System.Drawing.Point(453, 365)
+        Me.btnComprar.Name = "btnComprar"
+        Me.btnComprar.Size = New System.Drawing.Size(107, 44)
+        Me.btnComprar.TabIndex = 16
+        Me.btnComprar.Text = "Comprar"
+        Me.btnComprar.UseVisualStyleBackColor = True
+        '
+        'btnPerfil
+        '
+        Me.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPerfil.Location = New System.Drawing.Point(453, 23)
+        Me.btnPerfil.Name = "btnPerfil"
+        Me.btnPerfil.Size = New System.Drawing.Size(107, 44)
+        Me.btnPerfil.TabIndex = 17
+        Me.btnPerfil.Text = "Perfil"
+        Me.btnPerfil.UseVisualStyleBackColor = True
         '
         'frmListaProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.dgvProductos)
+        Me.ClientSize = New System.Drawing.Size(586, 450)
+        Me.Controls.Add(Me.btnPerfil)
+        Me.Controls.Add(Me.btnComprar)
+        Me.Controls.Add(Me.dgvListaProductos)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmListaProductos"
         Me.Text = "frmListaProductos"
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListaProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents dgvProductos As DataGridView
+    Friend WithEvents dgvListaProductos As DataGridView
+    Friend WithEvents btnComprar As Button
+    Friend WithEvents btnPerfil As Button
 End Class
