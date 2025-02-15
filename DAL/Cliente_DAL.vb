@@ -84,6 +84,7 @@ Public Class ClienteDAL
                 Using reader As SqlDataReader = command.ExecuteReader()
                     If reader.Read() Then
                         cliente = New Cliente With {
+                            .id = reader.GetInt32(0),
                             .cliente = reader.GetString(1),
                             .telefono = reader.GetString(2),
                             .correo = reader.GetString(3)

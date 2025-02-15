@@ -93,6 +93,12 @@
     <Compile Include="Cliente\frmListaProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Cliente\frmPerfilCliente.Designer.vb">
+      <DependentUpon>frmPerfilCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmPerfilCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cliente\frmVentaDetalles.Designer.vb">
       <DependentUpon>frmVentaDetalles.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\frmListaProductos.resx">
       <DependentUpon>frmListaProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmPerfilCliente.resx">
+      <DependentUpon>frmPerfilCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\frmVentaDetalles.resx">
       <DependentUpon>frmVentaDetalles.vb</DependentUpon>

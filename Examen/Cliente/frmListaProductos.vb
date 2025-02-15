@@ -1,5 +1,12 @@
 ﻿Imports BLL
+Imports Entity
 Public Class frmListaProductos
+    Private clienteChild As Cliente = Nothing
+    Private Sub frmListaProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim productoBll As Producto_BLL = New Producto_BLL()
+        Dim dt As DataTable = productoBll.GetProductos()
+        dgvListaProductos.DataSource = dt
+    End Sub
     Private Sub btnComprar_Click(sender As Object, e As EventArgs) Handles btnComprar.Click
         If dgvListaProductos.SelectedRows.Count > 0 Then
             Dim row As DataGridViewRow = dgvListaProductos.SelectedRows(0)
@@ -19,10 +26,11 @@ Public Class frmListaProductos
         'registrat una ventaitem en BD (idproducto, idventa, precio unitario, cantidad, total)
 
     End Sub
-
-    Private Sub frmListaProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim productoBll As Producto_BLL = New Producto_BLL()
-        Dim dt As DataTable = productoBll.GetProductos()
-        dgvListaProductos.DataSource = dt
+    Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
+        frmPerfilCliente.SetCliente(clienteChild)
+        frmPerfilCliente.ShowDialog()
+    End Sub
+    Public Sub SetCliente(cliente As Cliente)
+        clienteChild = cliente
     End Sub
 End Class

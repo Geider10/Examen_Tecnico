@@ -30,6 +30,7 @@ Partial Class frmAddCliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbxCorreo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblTituloCliente = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -103,12 +104,23 @@ Partial Class frmAddCliente
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Correo"
         '
+        'lblTituloCliente
+        '
+        Me.lblTituloCliente.AutoSize = True
+        Me.lblTituloCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.lblTituloCliente.Location = New System.Drawing.Point(139, 62)
+        Me.lblTituloCliente.Name = "lblTituloCliente"
+        Me.lblTituloCliente.Size = New System.Drawing.Size(151, 29)
+        Me.lblTituloCliente.TabIndex = 19
+        Me.lblTituloCliente.Text = "Titulo cliente"
+        '
         'frmAddCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(662, 450)
+        Me.Controls.Add(Me.lblTituloCliente)
         Me.Controls.Add(Me.tbxCorreo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.tbxTelefono)
@@ -132,4 +144,5 @@ Partial Class frmAddCliente
     Friend WithEvents Label2 As Label
     Friend WithEvents tbxCorreo As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents lblTituloCliente As Label
 End Class
