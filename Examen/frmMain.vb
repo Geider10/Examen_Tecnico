@@ -4,15 +4,11 @@ Imports System.Windows.Forms
 Imports System.Configuration
 
 Public Class frmMain
-    Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
-        frmClientesMain.ShowDialog()
+    Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        frmAdmin.ShowDialog()
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
-        frmProductoMain.ShowDialog()
+    Private Sub btnCliente_Click(sender As Object, e As EventArgs) Handles btnCliente.Click
+        frmCliente.ShowDialog()
     End Sub
 End Class
