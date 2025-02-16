@@ -81,6 +81,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Producto_BLL.vb" />
+    <Compile Include="VentasItem_BLL.vb" />
     <Compile Include="Venta_BLL.vb" />
   </ItemGroup>
   <ItemGroup>

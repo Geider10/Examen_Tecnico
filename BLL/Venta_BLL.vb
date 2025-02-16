@@ -1,13 +1,13 @@
 ﻿Imports Entity
 Imports DAL
 Public Class Venta_BLL
-    Public Sub Add(venta As Venta)
+    Public Function Add(venta As Venta) As Integer
         Dim ventaDal As Venta_DAL = New Venta_DAL()
-        ventaDal.Add(venta)
-    End Sub
-    Public Sub Update(total As Decimal, id As Integer)
+        Return ventaDal.Add(venta)
+    End Function
+    Public Sub Update(id As Integer)
         Dim ventaDal As Venta_DAL = New Venta_DAL()
-        ventaDal.Update(total, id)
+        ventaDal.Update(id)
     End Sub
     Public Sub Delete(id As Integer)
         Dim ventaDal As Venta_DAL = New Venta_DAL()
