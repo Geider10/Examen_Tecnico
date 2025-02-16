@@ -151,6 +151,18 @@
     <Compile Include="Producto\frmProductoMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Venta\frmVentaXProducto.Designer.vb">
+      <DependentUpon>frmVentaXProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\frmVentaXProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\frmVentaMain.Designer.vb">
+      <DependentUpon>frmVentaMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\frmVentaMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Cliente\frmAddCliente.resx">
@@ -188,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\frmProductoMain.resx">
       <DependentUpon>frmProductoMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\frmVentaMain.resx">
+      <DependentUpon>frmVentaMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\frmVentaXProducto.resx">
+      <DependentUpon>frmVentaXProducto.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
