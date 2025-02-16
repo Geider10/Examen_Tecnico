@@ -1,4 +1,7 @@
 ﻿Public Class frmVentaDetalles
+    Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
+
+    End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
@@ -10,5 +13,4 @@
         nudPrecio.Value = precio
         nudTotal.Value = precio * cantidad
     End Sub
-
 End Class
