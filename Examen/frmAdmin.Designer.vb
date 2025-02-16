@@ -26,6 +26,7 @@ Partial Class frmAdmin
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAtras = New System.Windows.Forms.Button()
+        Me.btnVentas = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnProductos
@@ -68,11 +69,22 @@ Partial Class frmAdmin
         Me.btnAtras.Text = "Atras"
         Me.btnAtras.UseVisualStyleBackColor = True
         '
+        'btnVentas
+        '
+        Me.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnVentas.Location = New System.Drawing.Point(455, 259)
+        Me.btnVentas.Name = "btnVentas"
+        Me.btnVentas.Size = New System.Drawing.Size(107, 44)
+        Me.btnVentas.TabIndex = 7
+        Me.btnVentas.Text = "Ventas"
+        Me.btnVentas.UseVisualStyleBackColor = True
+        '
         'frmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnProductos)
@@ -88,4 +100,5 @@ Partial Class frmAdmin
     Friend WithEvents btnClientes As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnAtras As Button
+    Friend WithEvents btnVentas As Button
 End Class

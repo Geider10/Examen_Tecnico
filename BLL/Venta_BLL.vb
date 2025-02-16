@@ -1,6 +1,10 @@
 ﻿Imports Entity
 Imports DAL
 Public Class Venta_BLL
+    Public Function GetVentas() As DataTable
+        Dim ventaDal As Venta_DAL = New Venta_DAL()
+        Return ventaDal.GetClientes()
+    End Function
     Public Function Add(venta As Venta) As Integer
         Dim ventaDal As Venta_DAL = New Venta_DAL()
         Return ventaDal.Add(venta)

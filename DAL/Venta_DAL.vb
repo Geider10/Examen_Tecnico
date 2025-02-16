@@ -2,6 +2,25 @@
 Imports Entity
 Public Class Venta_DAL
     Private db As DataBase = New DataBase()
+
+    Public Function GetClientes() As DataTable
+        Dim query As String = "SELECT ID, Fecha, Total FROM ventas"
+        Dim dt As New DataTable()
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                Using adapter As New SqlDataAdapter(command)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error al recuperar las ventas: " & ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+
+        Return dt
+    End Function
     Public Function Add(venta As Venta) As Integer
         Dim idVenta As Integer = 0
         Dim query As String = "INSERT INTO ventas (IDCliente, Fecha, Total) VALUES (@idCliente, @fecha, @total); SELECT SCOPE_IDENTITY();"

@@ -10,4 +10,8 @@
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         Close()
     End Sub
+
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        frmVentaMain.ShowDialog()
+    End Sub
 End Class

@@ -25,9 +25,9 @@ Partial Class frmVentaXProducto
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.tbxBuscar = New System.Windows.Forms.TextBox()
-        Me.dgvVentas = New System.Windows.Forms.DataGridView()
+        Me.dgvVentaItems = New System.Windows.Forms.DataGridView()
         Me.btnAtras = New System.Windows.Forms.Button()
-        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvVentaItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEditar
@@ -57,18 +57,18 @@ Partial Class frmVentaXProducto
         Me.tbxBuscar.Size = New System.Drawing.Size(233, 20)
         Me.tbxBuscar.TabIndex = 21
         '
-        'dgvVentas
+        'dgvVentaItems
         '
-        Me.dgvVentas.AllowUserToAddRows = False
-        Me.dgvVentas.AllowUserToDeleteRows = False
-        Me.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVentas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvVentas.Location = New System.Drawing.Point(35, 84)
-        Me.dgvVentas.MultiSelect = False
-        Me.dgvVentas.Name = "dgvVentas"
-        Me.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVentas.Size = New System.Drawing.Size(539, 256)
-        Me.dgvVentas.TabIndex = 20
+        Me.dgvVentaItems.AllowUserToAddRows = False
+        Me.dgvVentaItems.AllowUserToDeleteRows = False
+        Me.dgvVentaItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVentaItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvVentaItems.Location = New System.Drawing.Point(35, 84)
+        Me.dgvVentaItems.MultiSelect = False
+        Me.dgvVentaItems.Name = "dgvVentaItems"
+        Me.dgvVentaItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvVentaItems.Size = New System.Drawing.Size(539, 256)
+        Me.dgvVentaItems.TabIndex = 20
         '
         'btnAtras
         '
@@ -88,11 +88,11 @@ Partial Class frmVentaXProducto
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.tbxBuscar)
-        Me.Controls.Add(Me.dgvVentas)
+        Me.Controls.Add(Me.dgvVentaItems)
         Me.Controls.Add(Me.btnAtras)
         Me.Name = "frmVentaXProducto"
         Me.Text = "frmVentaXProducto"
-        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvVentaItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -101,6 +101,6 @@ Partial Class frmVentaXProducto
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents tbxBuscar As TextBox
-    Friend WithEvents dgvVentas As DataGridView
+    Friend WithEvents dgvVentaItems As DataGridView
     Friend WithEvents btnAtras As Button
 End Class

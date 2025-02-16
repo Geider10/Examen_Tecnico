@@ -10,7 +10,7 @@ Public Class ClienteDAL
             db.ConectarDB()
             Using command As New SqlCommand(query, db.connection)
                 Using adapter As New SqlDataAdapter(command)
-                    adapter.Fill(dt) ' Llena el DataTable con los datos
+                    adapter.Fill(dt)
                 End Using
             End Using
         Catch ex As Exception
