@@ -13,4 +13,8 @@ Public Class Venta_BLL
         Dim ventaDal As Venta_DAL = New Venta_DAL()
         ventaDal.Delete(id)
     End Sub
+    Public Function ExistsIdClient(idCliente As Integer) As Integer
+        Dim ventaDal As Venta_DAL = New Venta_DAL()
+        Return ventaDal.ExistsIdClient(idCliente)
+    End Function
 End Class

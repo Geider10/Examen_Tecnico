@@ -1,7 +1,7 @@
 ﻿Imports BLL
 Imports Entity
 Public Class frmListaProductos
-    Private clienteChild As Cliente = Nothing
+    Public clienteChild As Cliente = Nothing
     Private Sub frmListaProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim productoBll As Producto_BLL = New Producto_BLL()
         Dim dt As DataTable = productoBll.GetProductos()
@@ -15,16 +15,12 @@ Public Class frmListaProductos
             Dim precio As Decimal = Convert.ToDecimal(row.Cells(2).Value)
 
             Dim frmVenta As frmVentaDetalles = New frmVentaDetalles()
+            frmVenta.idProducto = idProducto
             frmVenta.SetTxt(nombre, precio)
             frmVenta.ShowDialog()
         Else
             MessageBox.Show("Por favor, seleccione una fila antes de editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
-        'seleccionar un producto de la tabla
-        'levantar una ventana (ventaDetalles) y definir nombre, precio unitario, cantidad, precio total. Boton confirmar y cancelar
-        'registar un venta en BD  (idccliente, fecha, precio total)
-        'registrat una ventaitem en BD (idproducto, idventa, precio unitario, cantidad, total)
-
     End Sub
     Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
         frmPerfilCliente.SetCliente(clienteChild)

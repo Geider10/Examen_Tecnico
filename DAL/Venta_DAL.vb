@@ -4,17 +4,19 @@ Public Class Venta_DAL
     Private db As DataBase = New DataBase()
     Public Function Add(venta As Venta) As Integer
         Dim idVenta As Integer = 0
-        Dim query = "INSERT INTO ventas (IDCliente, Fecha, Total) VALUES (@idCliente, @fecha, @total)"
+        Dim query As String = "INSERT INTO ventas (IDCliente, Fecha, Total) VALUES (@idCliente, @fecha, @total); SELECT SCOPE_IDENTITY();"
+
         Try
             db.ConectarDB()
             Using command As New SqlCommand(query, db.connection)
-                command.Parameters.AddWithValue("@idcliente", venta.idCliente)
+                command.Parameters.AddWithValue("@idCliente", venta.idCliente)
                 command.Parameters.AddWithValue("@fecha", venta.fecha)
                 command.Parameters.AddWithValue("@total", venta.total)
+
                 idVenta = Convert.ToInt32(command.ExecuteScalar())
             End Using
         Catch ex As Exception
-            Console.WriteLine("Error when adding a sale: " + ex.Message)
+            Console.WriteLine("Error al agregar la venta: " & ex.Message)
         Finally
             db.CerrarDB()
         End Try
@@ -51,4 +53,22 @@ Public Class Venta_DAL
             db.CerrarDB()
         End Try
     End Sub
+    Public Function ExistsIdClient(idCliente As Integer) As Integer
+        Dim isVenta As Integer = 0
+        Dim query As String = "SELECT ID FROM ventas WHERE IDCliente=@idCliente"
+
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                command.Parameters.AddWithValue("@idCliente", idCliente)
+                isVenta = Convert.ToInt32(command.ExecuteScalar())
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error when displawing a client: " + ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+
+        Return isVenta
+    End Function
 End Class
