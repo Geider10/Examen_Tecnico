@@ -35,7 +35,7 @@ Partial Class frmProductoMain
         'btnEliminar
         '
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEliminar.Location = New System.Drawing.Point(337, 373)
+        Me.btnEliminar.Location = New System.Drawing.Point(416, 373)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(136, 37)
         Me.btnEliminar.TabIndex = 14
@@ -45,7 +45,7 @@ Partial Class frmProductoMain
         'btnEditar
         '
         Me.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditar.Location = New System.Drawing.Point(179, 373)
+        Me.btnEditar.Location = New System.Drawing.Point(217, 373)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(127, 37)
         Me.btnEditar.TabIndex = 13
@@ -79,7 +79,7 @@ Partial Class frmProductoMain
         Me.dgvProductos.MultiSelect = False
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProductos.Size = New System.Drawing.Size(775, 256)
+        Me.dgvProductos.Size = New System.Drawing.Size(539, 256)
         Me.dgvProductos.TabIndex = 10
         '
         'btnAgregar
@@ -106,7 +106,7 @@ Partial Class frmProductoMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(571, 450)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnBuscar)

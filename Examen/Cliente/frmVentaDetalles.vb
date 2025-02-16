@@ -7,19 +7,12 @@ Public Class frmVentaDetalles
         Dim ventaBll As Venta_BLL = New Venta_BLL()
         Dim isVenta As Integer = ventaBll.ExistsIdClient(idCliente)
         Dim ventaItemBll As VentasItem_BLL = New VentasItem_BLL()
-        MessageBox.Show("Id de la venta: " + Convert.ToString(isVenta))
         If isVenta >= 1 Then
             'regitrar ventaitem y actualizar las ventas
-            Dim ventaItem As VentasItem = New VentasItem With {
-                 .idVenta = isVenta,
-                .idProducto = idProducto,
-                .precioUnitario = nudPrecio.Value,
-                .cantidad = nudCantidad.Value,
-                .precioTotal = nudTotal.Value
-            }
+            Dim ventaItem As VentasItem = New VentasItem().CreateVentaItem(isVenta, idProducto, nudPrecio.Value, nudCantidad.Value, nudTotal.Value)
             ventaItemBll.Add(ventaItem)
             ventaBll.Update(isVenta)
-            MessageBox.Show("Se creo una ventaItem y se actualizaron las ventas con exito.")
+            MessageBox.Show("Se creo una ventaItem y se actualizo el total de la venta con exito.")
         Else
             'crear venta y registrar venta
             Dim venta As Venta = New Venta With {
@@ -29,15 +22,11 @@ Public Class frmVentaDetalles
             }
             Dim idVenta As Integer = ventaBll.Add(venta)
             'crear ventaItem y registrar ventaitem,
-            Dim ventaItem As VentasItem = New VentasItem With {
-                .idVenta = idVenta,
-                .idProducto = idProducto,
-                .precioUnitario = nudPrecio.Value,
-                .cantidad = nudCantidad.Value,
-                .precioTotal = nudTotal.Value
-            }
+            Dim ventaItem As VentasItem = New VentasItem().CreateVentaItem(idVenta, idProducto, nudPrecio.Value, nudCantidad.Value, nudTotal.Value)
             ventaItemBll.Add(ventaItem)
-            MessageBox.Show("Se creo una venta y una VentaItem con exito.")
+            'actualizar el total de la venta por IDCliente
+            ventaBll.Update(idVenta)
+            MessageBox.Show("Se creo una venta y una ventaItem con exito.")
         End If
         idProducto = 0
         Me.Close()

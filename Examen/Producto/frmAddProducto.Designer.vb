@@ -30,12 +30,13 @@ Partial Class frmAddProducto
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.nudPrecio = New System.Windows.Forms.NumericUpDown()
+        Me.lblTituloProducto = New System.Windows.Forms.Label()
         CType(Me.nudPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbxCategoria
         '
-        Me.tbxCategoria.Location = New System.Drawing.Point(273, 204)
+        Me.tbxCategoria.Location = New System.Drawing.Point(163, 237)
         Me.tbxCategoria.Name = "tbxCategoria"
         Me.tbxCategoria.Size = New System.Drawing.Size(232, 20)
         Me.tbxCategoria.TabIndex = 17
@@ -44,7 +45,7 @@ Partial Class frmAddProducto
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label3.Location = New System.Drawing.Point(190, 207)
+        Me.Label3.Location = New System.Drawing.Point(80, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 16
@@ -54,7 +55,7 @@ Partial Class frmAddProducto
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(190, 157)
+        Me.Label2.Location = New System.Drawing.Point(80, 190)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(48, 17)
         Me.Label2.TabIndex = 14
@@ -62,7 +63,7 @@ Partial Class frmAddProducto
         '
         'tbxNombre
         '
-        Me.tbxNombre.Location = New System.Drawing.Point(273, 111)
+        Me.tbxNombre.Location = New System.Drawing.Point(163, 144)
         Me.tbxNombre.Name = "tbxNombre"
         Me.tbxNombre.Size = New System.Drawing.Size(232, 20)
         Me.tbxNombre.TabIndex = 13
@@ -71,7 +72,7 @@ Partial Class frmAddProducto
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(190, 114)
+        Me.Label1.Location = New System.Drawing.Point(80, 147)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 12
@@ -80,7 +81,7 @@ Partial Class frmAddProducto
         'btnCancelar
         '
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.Location = New System.Drawing.Point(413, 260)
+        Me.btnCancelar.Location = New System.Drawing.Point(303, 293)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(92, 37)
         Me.btnCancelar.TabIndex = 11
@@ -90,7 +91,7 @@ Partial Class frmAddProducto
         'btnGuardar
         '
         Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGuardar.Location = New System.Drawing.Point(273, 260)
+        Me.btnGuardar.Location = New System.Drawing.Point(163, 293)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(92, 37)
         Me.btnGuardar.TabIndex = 10
@@ -100,18 +101,29 @@ Partial Class frmAddProducto
         'nudPrecio
         '
         Me.nudPrecio.DecimalPlaces = 2
-        Me.nudPrecio.Location = New System.Drawing.Point(273, 154)
+        Me.nudPrecio.Location = New System.Drawing.Point(163, 187)
         Me.nudPrecio.Maximum = New Decimal(New Integer() {1410065407, 2, 0, 0})
         Me.nudPrecio.Name = "nudPrecio"
         Me.nudPrecio.Size = New System.Drawing.Size(232, 20)
         Me.nudPrecio.TabIndex = 18
+        '
+        'lblTituloProducto
+        '
+        Me.lblTituloProducto.AutoSize = True
+        Me.lblTituloProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.lblTituloProducto.Location = New System.Drawing.Point(78, 81)
+        Me.lblTituloProducto.Name = "lblTituloProducto"
+        Me.lblTituloProducto.Size = New System.Drawing.Size(175, 29)
+        Me.lblTituloProducto.TabIndex = 20
+        Me.lblTituloProducto.Text = "Titulo producto"
         '
         'frmAddProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(530, 450)
+        Me.Controls.Add(Me.lblTituloProducto)
         Me.Controls.Add(Me.nudPrecio)
         Me.Controls.Add(Me.tbxCategoria)
         Me.Controls.Add(Me.Label3)
@@ -136,4 +148,5 @@ Partial Class frmAddProducto
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents nudPrecio As NumericUpDown
+    Friend WithEvents lblTituloProducto As Label
 End Class

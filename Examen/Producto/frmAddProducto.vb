@@ -2,6 +2,13 @@
 Imports Entity
 Public Class frmAddProducto
     Public idProducto As Integer = 0
+    Private Sub frmAddProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If idProducto <> 0 Then
+            lblTituloProducto.Text = "Editar Producto"
+        Else
+            lblTituloProducto.Text = "Crear Producto"
+        End If
+    End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim productoBll As Producto_BLL = New Producto_BLL()
         Dim producto As Producto = New Producto()
@@ -36,6 +43,5 @@ Public Class frmAddProducto
         nudPrecio.Value = 0
         tbxCategoria.Text = " "
     End Sub
-
 
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmClientesMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,15 @@ Partial Class frmClientesMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnAtrasCliente = New System.Windows.Forms.Button()
-        Me.btnAgregarCliente = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.tbxSearch = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnEditarCliente = New System.Windows.Forms.Button()
-        Me.btnEliminarCliente = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,15 +43,15 @@ Partial Class frmClientesMain
         Me.btnAtrasCliente.Text = "Atras"
         Me.btnAtrasCliente.UseVisualStyleBackColor = True
         '
-        'btnAgregarCliente
+        'btnEliminar
         '
-        Me.btnAgregarCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAgregarCliente.Location = New System.Drawing.Point(65, 401)
-        Me.btnAgregarCliente.Name = "btnAgregarCliente"
-        Me.btnAgregarCliente.Size = New System.Drawing.Size(92, 37)
-        Me.btnAgregarCliente.TabIndex = 2
-        Me.btnAgregarCliente.Text = "Agregar cliente"
-        Me.btnAgregarCliente.UseVisualStyleBackColor = True
+        Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEliminar.Location = New System.Drawing.Point(65, 401)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(92, 37)
+        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.Text = "Eliminar cliente"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'dgvClientes
         '
@@ -65,7 +63,7 @@ Partial Class frmClientesMain
         Me.dgvClientes.MultiSelect = False
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClientes.Size = New System.Drawing.Size(775, 256)
+        Me.dgvClientes.Size = New System.Drawing.Size(539, 256)
         Me.dgvClientes.TabIndex = 3
         '
         'tbxSearch
@@ -89,37 +87,15 @@ Partial Class frmClientesMain
         '
         Me.ClienteBindingSource.DataSource = GetType(Entity.Cliente)
         '
-        'btnEditarCliente
-        '
-        Me.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditarCliente.Location = New System.Drawing.Point(231, 401)
-        Me.btnEditarCliente.Name = "btnEditarCliente"
-        Me.btnEditarCliente.Size = New System.Drawing.Size(92, 37)
-        Me.btnEditarCliente.TabIndex = 6
-        Me.btnEditarCliente.Text = "Editar cliente"
-        Me.btnEditarCliente.UseVisualStyleBackColor = True
-        '
-        'btnEliminarCliente
-        '
-        Me.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEliminarCliente.Location = New System.Drawing.Point(389, 401)
-        Me.btnEliminarCliente.Name = "btnEliminarCliente"
-        Me.btnEliminarCliente.Size = New System.Drawing.Size(92, 37)
-        Me.btnEliminarCliente.TabIndex = 7
-        Me.btnEliminarCliente.Text = "Eliminar cliente"
-        Me.btnEliminarCliente.UseVisualStyleBackColor = True
-        '
         'frmClientesMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 472)
-        Me.Controls.Add(Me.btnEliminarCliente)
-        Me.Controls.Add(Me.btnEditarCliente)
+        Me.ClientSize = New System.Drawing.Size(672, 472)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.tbxSearch)
         Me.Controls.Add(Me.dgvClientes)
-        Me.Controls.Add(Me.btnAgregarCliente)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAtrasCliente)
         Me.Name = "frmClientesMain"
         Me.Text = "frmClientesMain"
@@ -130,11 +106,9 @@ Partial Class frmClientesMain
 
     End Sub
     Friend WithEvents btnAtrasCliente As Button
-    Friend WithEvents btnAgregarCliente As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents dgvClientes As DataGridView
     Friend WithEvents tbxSearch As TextBox
     Friend WithEvents btnBuscar As Button
     Friend WithEvents ClienteBindingSource As BindingSource
-    Friend WithEvents btnEditarCliente As Button
-    Friend WithEvents btnEliminarCliente As Button
 End Class
