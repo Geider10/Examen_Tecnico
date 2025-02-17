@@ -27,8 +27,8 @@ Partial Class frmClientesMain
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.tbxSearch = New System.Windows.Forms.TextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cbxCliente = New System.Windows.Forms.ComboBox()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,31 +68,29 @@ Partial Class frmClientesMain
         '
         'tbxSearch
         '
-        Me.tbxSearch.Location = New System.Drawing.Point(191, 78)
+        Me.tbxSearch.Location = New System.Drawing.Point(318, 78)
         Me.tbxSearch.Name = "tbxSearch"
-        Me.tbxSearch.Size = New System.Drawing.Size(290, 20)
+        Me.tbxSearch.Size = New System.Drawing.Size(167, 20)
         Me.tbxSearch.TabIndex = 4
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Location = New System.Drawing.Point(512, 69)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(92, 37)
-        Me.btnBuscar.TabIndex = 5
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'ClienteBindingSource
         '
         Me.ClienteBindingSource.DataSource = GetType(Entity.Cliente)
+        '
+        'cbxCliente
+        '
+        Me.cbxCliente.FormattingEnabled = True
+        Me.cbxCliente.Location = New System.Drawing.Point(501, 78)
+        Me.cbxCliente.Name = "cbxCliente"
+        Me.cbxCliente.Size = New System.Drawing.Size(103, 21)
+        Me.cbxCliente.TabIndex = 5
         '
         'frmClientesMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(672, 472)
-        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.cbxCliente)
         Me.Controls.Add(Me.tbxSearch)
         Me.Controls.Add(Me.dgvClientes)
         Me.Controls.Add(Me.btnEliminar)
@@ -109,6 +107,6 @@ Partial Class frmClientesMain
     Friend WithEvents btnEliminar As Button
     Friend WithEvents dgvClientes As DataGridView
     Friend WithEvents tbxSearch As TextBox
-    Friend WithEvents btnBuscar As Button
     Friend WithEvents ClienteBindingSource As BindingSource
+    Friend WithEvents cbxCliente As ComboBox
 End Class

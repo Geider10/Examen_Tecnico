@@ -72,7 +72,6 @@ Public Class ClienteDAL
             db.CerrarDB()
         End Try
     End Sub
-
     Public Function GetClienteByEmail(email As String) As Cliente
         Dim query As String = "SELECT ID, Cliente, Telefono, Correo from clientes where Correo=@Correo"
         Dim cliente As Cliente = Nothing
@@ -98,6 +97,27 @@ Public Class ClienteDAL
         Finally
             db.CerrarDB()
         End Try
+
         Return cliente
+    End Function
+    Public Function GetClientesByKey(key As String, value As String) As DataTable
+        Dim query As String = "SELECT * FROM clientes WHERE " & key & " LIKE @value"
+        Dim dt As New DataTable()
+
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                command.Parameters.AddWithValue("@value", "%" & value & "%")
+                Using adapter As New SqlDataAdapter(command)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error when getting customers by key and value: " + ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+
+        Return dt
     End Function
 End Class

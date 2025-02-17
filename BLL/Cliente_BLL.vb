@@ -26,4 +26,8 @@ Public Class Cliente_BLL
         Dim clienteDal As ClienteDAL = New ClienteDAL()
         Return clienteDal.GetClienteByEmail(email)
     End Function
+    Public Function GetClientesByKey(key As String, value As String) As DataTable
+        Dim clienteDal As ClienteDAL = New ClienteDAL()
+        Return clienteDal.GetClientesByKey(key, value)
+    End Function
 End Class
