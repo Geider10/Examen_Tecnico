@@ -25,7 +25,6 @@ Public Class frmAddCliente
             MessageBox.Show("Se edito un cliente con exito")
         Else
             clienteBll.Add(cliente)
-            frmClientesMain.ActualizarDGV()
             MessageBox.Show("Se agrego un cliente con exito")
         End If
 

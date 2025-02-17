@@ -89,6 +89,7 @@ Partial Class frmAddCliente
         '
         'tbxCorreo
         '
+        Me.tbxCorreo.Enabled = False
         Me.tbxCorreo.Location = New System.Drawing.Point(224, 220)
         Me.tbxCorreo.Name = "tbxCorreo"
         Me.tbxCorreo.Size = New System.Drawing.Size(232, 20)

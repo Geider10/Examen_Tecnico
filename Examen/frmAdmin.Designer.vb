@@ -32,7 +32,7 @@ Partial Class frmAdmin
         'btnProductos
         '
         Me.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnProductos.Location = New System.Drawing.Point(299, 259)
+        Me.btnProductos.Location = New System.Drawing.Point(332, 259)
         Me.btnProductos.Name = "btnProductos"
         Me.btnProductos.Size = New System.Drawing.Size(107, 44)
         Me.btnProductos.TabIndex = 4
@@ -53,7 +53,7 @@ Partial Class frmAdmin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(210, 170)
+        Me.Label1.Location = New System.Drawing.Point(234, 167)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(328, 31)
         Me.Label1.TabIndex = 5
@@ -72,7 +72,7 @@ Partial Class frmAdmin
         'btnVentas
         '
         Me.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnVentas.Location = New System.Drawing.Point(455, 259)
+        Me.btnVentas.Location = New System.Drawing.Point(527, 259)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(107, 44)
         Me.btnVentas.TabIndex = 7
