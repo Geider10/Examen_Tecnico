@@ -14,4 +14,8 @@
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
         frmVentaMain.ShowDialog()
     End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        frmReporteVentas.ShowDialog()
+    End Sub
 End Class

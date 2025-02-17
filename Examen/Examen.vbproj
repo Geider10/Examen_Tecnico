@@ -151,6 +151,12 @@
     <Compile Include="Producto\frmProductoMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reporte\frmReporteVentas.Designer.vb">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\frmReporteVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Venta\frmVentaXProducto.Designer.vb">
       <DependentUpon>frmVentaXProducto.vb</DependentUpon>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\frmProductoMain.resx">
       <DependentUpon>frmProductoMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\frmVentaMain.resx">
       <DependentUpon>frmVentaMain.vb</DependentUpon>

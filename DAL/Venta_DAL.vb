@@ -4,7 +4,7 @@ Public Class Venta_DAL
     Private db As DataBase = New DataBase()
 
     Public Function GetClientes() As DataTable
-        Dim query As String = "SELECT ID, Fecha, Total FROM ventas"
+        Dim query As String = "SELECT ID,IDCliente, Fecha, Total FROM ventas"
         Dim dt As New DataTable()
         Try
             db.ConectarDB()
@@ -21,6 +21,38 @@ Public Class Venta_DAL
 
         Return dt
     End Function
+
+    Public Function GetVentasClientes() As DataTable
+        Dim query As String = "SELECT 
+        v.ID AS VentaID,
+        c.Cliente AS NombreCliente,
+        c.Telefono AS TelefonoCliente,
+        c.Correo AS CorreoCliente,
+        SUM(vi.Cantidad) AS CantidadProductos,
+        v.Fecha AS FechaVenta,
+        v.Total AS TotalVenta
+        FROM ventas v
+        JOIN clientes c ON v.IDCliente = c.ID
+        JOIN ventasitems vi ON vi.IDVenta = v.ID
+        GROUP BY v.ID, c.Cliente, c.Telefono,  c.Correo, v.Fecha, v.Total"
+        Dim dt As New DataTable()
+
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                Using adapter As New SqlDataAdapter(command)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error al recuperar las ventas por cliente:  " & ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+
+        Return dt
+    End Function
+
     Public Function Add(venta As Venta) As Integer
         Dim idVenta As Integer = 0
         Dim query As String = "INSERT INTO ventas (IDCliente, Fecha, Total) VALUES (@idCliente, @fecha, @total); SELECT SCOPE_IDENTITY();"

@@ -16,9 +16,9 @@ Public Class frmVentaXProducto
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         If dgvVentaItems.SelectedRows.Count > 0 Then
             Dim row As DataGridViewRow = dgvVentaItems.SelectedRows(0)
-            Dim precio As Decimal = Convert.ToDecimal(row.Cells(2).Value)
-            Dim cantidad As Decimal = Convert.ToDecimal(row.Cells(3).Value)
-            Dim total As Decimal = Convert.ToDecimal(row.Cells(4).Value)
+            Dim precio As Decimal = Convert.ToDecimal(row.Cells(3).Value)
+            Dim cantidad As Decimal = Convert.ToDecimal(row.Cells(4).Value)
+            Dim total As Decimal = Convert.ToDecimal(row.Cells(5).Value)
 
             frmVentaItemEdit.id = Convert.ToInt32(row.Cells(0).Value)
             frmVentaItemEdit.idVenta = Convert.ToInt32(row.Cells(1).Value)

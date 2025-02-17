@@ -9,6 +9,12 @@ Public Class Venta_BLL
         Dim ventaDal As Venta_DAL = New Venta_DAL()
         Return ventaDal.Add(venta)
     End Function
+
+    Public Function GetVentasClientes() As DataTable
+        Dim ventaDal As Venta_DAL = New Venta_DAL()
+        Return ventaDal.GetVentasClientes()
+    End Function
+
     Public Sub Update(id As Integer)
         Dim ventaDal As Venta_DAL = New Venta_DAL()
         ventaDal.Update(id)

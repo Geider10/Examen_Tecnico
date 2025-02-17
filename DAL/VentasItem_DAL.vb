@@ -3,7 +3,7 @@ Imports Entity
 Public Class VentasItem_DAL
     Private db As DataBase = New DataBase()
     Public Function GeItemsSale() As DataTable
-        Dim query As String = "SELECT ID, IDVenta, PrecioUnitario, Cantidad, PrecioTotal FROM ventasitems"
+        Dim query As String = "SELECT ID, IDVenta, IDProducto, PrecioUnitario, Cantidad, PrecioTotal FROM ventasitems"
         Dim dt As New DataTable()
 
         Try
