@@ -24,8 +24,6 @@ Partial Class frmProductoMain
     Private Sub InitializeComponent()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.tbxBuscar = New System.Windows.Forms.TextBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
@@ -51,23 +49,6 @@ Partial Class frmProductoMain
         Me.btnEditar.TabIndex = 13
         Me.btnEditar.Text = "Editar producto"
         Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Location = New System.Drawing.Point(460, 41)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(92, 37)
-        Me.btnBuscar.TabIndex = 12
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'tbxBuscar
-        '
-        Me.tbxBuscar.Location = New System.Drawing.Point(139, 50)
-        Me.tbxBuscar.Name = "tbxBuscar"
-        Me.tbxBuscar.Size = New System.Drawing.Size(290, 20)
-        Me.tbxBuscar.TabIndex = 11
         '
         'dgvProductos
         '
@@ -109,8 +90,6 @@ Partial Class frmProductoMain
         Me.ClientSize = New System.Drawing.Size(571, 450)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.tbxBuscar)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnAtras)
@@ -118,14 +97,11 @@ Partial Class frmProductoMain
         Me.Text = "frmProductoMain"
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnEditar As Button
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents tbxBuscar As TextBox
     Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnAtras As Button

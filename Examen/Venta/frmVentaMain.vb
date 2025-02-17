@@ -8,6 +8,7 @@ Public Class frmVentaMain
         If dgvVentas.SelectedRows.Count > 0 Then
             Dim row As DataGridViewRow = dgvVentas.SelectedRows(0)
             Dim idVenta As Integer = Convert.ToInt32(row.Cells(0).Value)
+            'eliminar la venta y la ventaitem relacionda con el IDVenta
             Dim ventaBll As Venta_BLL = New Venta_BLL()
             Dim ventaItemBll As VentasItem_BLL = New VentasItem_BLL()
             ventaItemBll.Delete(idVenta)

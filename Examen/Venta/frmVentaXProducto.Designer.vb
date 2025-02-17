@@ -23,8 +23,6 @@ Partial Class frmVentaXProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.tbxBuscar = New System.Windows.Forms.TextBox()
         Me.dgvVentaItems = New System.Windows.Forms.DataGridView()
         Me.btnAtras = New System.Windows.Forms.Button()
         CType(Me.dgvVentaItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,23 +37,6 @@ Partial Class frmVentaXProducto
         Me.btnEditar.TabIndex = 24
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Location = New System.Drawing.Point(482, 31)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(92, 37)
-        Me.btnBuscar.TabIndex = 22
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'tbxBuscar
-        '
-        Me.tbxBuscar.Location = New System.Drawing.Point(243, 40)
-        Me.tbxBuscar.Name = "tbxBuscar"
-        Me.tbxBuscar.Size = New System.Drawing.Size(233, 20)
-        Me.tbxBuscar.TabIndex = 21
         '
         'dgvVentaItems
         '
@@ -86,21 +67,16 @@ Partial Class frmVentaXProducto
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(613, 450)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.tbxBuscar)
         Me.Controls.Add(Me.dgvVentaItems)
         Me.Controls.Add(Me.btnAtras)
         Me.Name = "frmVentaXProducto"
         Me.Text = "frmVentaXProducto"
         CType(Me.dgvVentaItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btnEditar As Button
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents tbxBuscar As TextBox
     Friend WithEvents dgvVentaItems As DataGridView
     Friend WithEvents btnAtras As Button
 End Class

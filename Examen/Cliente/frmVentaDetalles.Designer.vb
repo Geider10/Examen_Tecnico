@@ -60,6 +60,7 @@ Partial Class frmVentaDetalles
         '
         'tbxNombre
         '
+        Me.tbxNombre.Enabled = False
         Me.tbxNombre.Location = New System.Drawing.Point(202, 122)
         Me.tbxNombre.Name = "tbxNombre"
         Me.tbxNombre.ReadOnly = True
@@ -109,6 +110,7 @@ Partial Class frmVentaDetalles
         'nudPrecio
         '
         Me.nudPrecio.DecimalPlaces = 2
+        Me.nudPrecio.Enabled = False
         Me.nudPrecio.Location = New System.Drawing.Point(202, 173)
         Me.nudPrecio.Maximum = New Decimal(New Integer() {99999999, 0, 0, 0})
         Me.nudPrecio.Name = "nudPrecio"
@@ -129,6 +131,7 @@ Partial Class frmVentaDetalles
         'nudTotal
         '
         Me.nudTotal.DecimalPlaces = 2
+        Me.nudTotal.Enabled = False
         Me.nudTotal.Location = New System.Drawing.Point(202, 264)
         Me.nudTotal.Maximum = New Decimal(New Integer() {9999999, 0, 0, 0})
         Me.nudTotal.Name = "nudTotal"

@@ -18,9 +18,10 @@ Public Class frmAddProducto
 
         If idProducto <> 0 Then
             productoBll.Update(producto, idProducto)
-
+            MessageBox.Show("Se edito un producto con exito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             productoBll.Add(producto)
+            MessageBox.Show("Se edito un producto con exito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         idProducto = 0

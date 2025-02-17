@@ -35,6 +35,7 @@ Public Class frmProductoMain
             Dim productoBll As Producto_BLL = New Producto_BLL()
             productoBll.Delete(id)
             Actualizar()
+            MessageBox.Show("Se elimino un producto con exito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
     Public Sub Actualizar()

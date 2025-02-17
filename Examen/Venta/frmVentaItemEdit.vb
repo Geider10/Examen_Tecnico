@@ -14,7 +14,7 @@ Public Class frmVentaItemEdit
         frmVentaXProducto.Actualizar()
         frmVentaMain.Actualizar()
         Me.Close()
-        MessageBox.Show("Se actualizo una los datos de una venta con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Se actualizo los datos de un producto vendido con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
     Public Sub SetCampos(precio As Decimal, cantidad As Decimal, total As Decimal)
         nudPrecio.Value = precio
