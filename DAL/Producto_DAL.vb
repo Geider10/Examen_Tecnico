@@ -77,4 +77,24 @@ Public Class Producto_DAL
             db.CerrarDB()
         End Try
     End Sub
+    Public Function GetProductosByName(keyWord As String) As DataTable
+        Dim dt As New DataTable()
+        Dim query As String = "SELECT * FROM productos WHERE Nombre LIKE @keyWord"
+
+        Try
+            db.ConectarDB()
+            Using command As New SqlCommand(query, db.connection)
+                command.Parameters.AddWithValue("@keyword", "%" & keyWord & "%")
+                Using adapter As New SqlDataAdapter(command)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error when retrevin products: " + ex.Message)
+        Finally
+            db.CerrarDB()
+        End Try
+
+        Return dt
+    End Function
 End Class

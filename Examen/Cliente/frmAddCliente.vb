@@ -19,14 +19,14 @@ Public Class frmAddCliente
 
         If idCliente <> 0 Then
             clienteBll.Update(cliente, idCliente)
-            MessageBox.Show("Se edito un cliente, Id: " + idCliente.ToString())
             frmPerfilCliente.SetCliente(cliente)
             frmListaProductos.SetCliente(cliente)
             frmPerfilCliente.ActualizarPerfil()
+            MessageBox.Show("Se edito un cliente con exito")
         Else
             clienteBll.Add(cliente)
             frmClientesMain.ActualizarDGV()
-            MessageBox.Show("Se agrego un cliente")
+            MessageBox.Show("Se agrego un cliente con exito")
         End If
 
         idCliente = 0

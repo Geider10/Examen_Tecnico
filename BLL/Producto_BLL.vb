@@ -21,4 +21,8 @@ Public Class Producto_BLL
         Dim productoDAL As Producto_DAL = New Producto_DAL()
         productoDAL.Delete(id)
     End Sub
+    Public Function GetProductosByName(keyWord As String) As DataTable
+        Dim productoDal As Producto_DAL = New Producto_DAL()
+        Return productoDal.GetProductosByName(keyWord)
+    End Function
 End Class

@@ -26,6 +26,7 @@ Partial Class frmListaProductos
         Me.dgvListaProductos = New System.Windows.Forms.DataGridView()
         Me.btnComprar = New System.Windows.Forms.Button()
         Me.btnPerfil = New System.Windows.Forms.Button()
+        Me.tbxBuscar = New System.Windows.Forms.TextBox()
         CType(Me.dgvListaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,18 +66,26 @@ Partial Class frmListaProductos
         'btnPerfil
         '
         Me.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPerfil.Location = New System.Drawing.Point(453, 23)
+        Me.btnPerfil.Location = New System.Drawing.Point(453, 34)
         Me.btnPerfil.Name = "btnPerfil"
         Me.btnPerfil.Size = New System.Drawing.Size(107, 44)
         Me.btnPerfil.TabIndex = 17
         Me.btnPerfil.Text = "Perfil"
         Me.btnPerfil.UseVisualStyleBackColor = True
         '
+        'tbxBuscar
+        '
+        Me.tbxBuscar.Location = New System.Drawing.Point(155, 47)
+        Me.tbxBuscar.Name = "tbxBuscar"
+        Me.tbxBuscar.Size = New System.Drawing.Size(161, 20)
+        Me.tbxBuscar.TabIndex = 19
+        '
         'frmListaProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 450)
+        Me.Controls.Add(Me.tbxBuscar)
         Me.Controls.Add(Me.btnPerfil)
         Me.Controls.Add(Me.btnComprar)
         Me.Controls.Add(Me.dgvListaProductos)
@@ -93,4 +102,5 @@ Partial Class frmListaProductos
     Friend WithEvents dgvListaProductos As DataGridView
     Friend WithEvents btnComprar As Button
     Friend WithEvents btnPerfil As Button
+    Friend WithEvents tbxBuscar As TextBox
 End Class
